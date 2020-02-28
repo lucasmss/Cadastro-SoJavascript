@@ -17,8 +17,16 @@ body {
  
 }
 
-.label-usuario {
-    margin-left: -11px;
+.label-senha {
+
+    padding-right: 12px;
+}
+
+.lembrar-senha {
+ 
+}
+#button {
+   margin-left: 66px;
 }
 
 
