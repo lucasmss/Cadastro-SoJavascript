@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     padding: 0px;
-  background-color: beige;
 }
 
 #login {
@@ -9,7 +8,7 @@ body {
     width: 400px;
     margin: auto;
     text-align: center;
-    background-color: blanchedalmond;
+    background-color: beige;
 }
 
 #h1-login {
