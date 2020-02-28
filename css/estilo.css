@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+    padding: 0px;
+  background-color: beige;
+}
+
+#login {
+
+    padding: 20px;
+    text-align: center;
+}
+
+#h1-login {
+
+ padding-bottom: 20px;
+ 
+}
+
+.label-usuario {
+    margin-left: -11px;
+}
+
+
