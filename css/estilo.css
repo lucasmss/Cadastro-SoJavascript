@@ -3,7 +3,7 @@ body {
     padding: 0px;
 }
 
-#login {
+#div-login {
 
     width: 400px;
     margin: auto;
@@ -25,7 +25,7 @@ body {
 .lembrar-senha {
  
 }
-#button {
+#login{
    margin-left: 66px;
 }
 

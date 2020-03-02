@@ -4,28 +4,28 @@
     <meta charset='utf-8'>
     <title>Projeto-basis</title>
     <link href="css/estilo.css" rel="stylesheet">
-    <script language="JavaScript" src="arquivo.js"></script>
+    <script src="arquivo.js"></script>
 </head>
 <body>
     
-    <div id="login">
+    <div id="div-login">
         <div>
 
-            <form action="">
+            <form action="" id="formulario">
 
                 <h1 id="h1-login">Login</h1>
 
                 <label for="usuario">Usuário:*</label>
-                <input type="text" name="usuario" id="user"/>
+                <input id="user" type="text" name="usuario" required/>
                 <br> <br>
                 <label for="senha" class="label-senha">Senha:*</label>
-                <input type="text" name="senha"/>
+                <input type="text" name="senha" id="senha" required/>
                 <br> <br>
 
                 <input type="checkbox" name="lembrar-senha" class="lembrar-senha"/>
                 <label for="lembrar-senha">Lembrar Senha</label>
 
-                <button type="submit" id="button">Login</button>
+                <button type="submit" id="login" onclick="validar()">Login</button>
 
             </form>
          </div>
