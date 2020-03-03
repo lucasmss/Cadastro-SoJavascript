@@ -4,7 +4,8 @@
     <meta charset='utf-8'>
     <title>Projeto-basis</title>
     <link href="css/estilo.css" rel="stylesheet">
-    <script src="arquivo.js"></script>
+    <link href="cadastroProduto.html">
+    <script src="js/arquivo.js"></script>
 </head>
 <body>
     
@@ -16,7 +17,7 @@
                 <h1 id="h1-login">Login</h1>
 
                 <label for="usuario">Usuário:*</label>
-                <input id="user" type="text" name="usuario" required/>
+                <input id="usuario" type="text" name="usuario" required/>
                 <br> <br>
                 <label for="senha" class="label-senha">Senha:*</label>
                 <input type="text" name="senha" id="senha" required/>
@@ -25,7 +26,7 @@
                 <input type="checkbox" name="lembrar-senha" class="lembrar-senha"/>
                 <label for="lembrar-senha">Lembrar Senha</label>
 
-                <button type="submit" id="login" onclick="validar()">Login</button>
+                <button type="submit" id="login" onclick="validarLogin()">Login</button>
 
             </form>
          </div>
