@@ -25,8 +25,35 @@ body {
 .lembrar-senha {
  
 }
+
 #login{
+
    margin-left: 66px;
+   
+}
+
+.div-home {
+    
+ display: grid;
+ grid-template-columns: auto;
+ align-content: center;
+
+}
+
+#titulo-cadastro{
+background-color: blueviolet;
+
+  
+}
+#usuario-logado{
+    background-color: chartreuse;
+   
+    
+}
+
+
+table, th, td{
+    border: 1px solid black;
 }
 
 
