@@ -81,9 +81,10 @@
             <div class="tipoProduto">
                 <label for="tipoProduto">Tipo de produto*</label>
                 <select id="tipoProduto">
-                    <option>Seleção</option>
-                    <option>Peresivel</option>
-                    <option>Não peresivel</option>
+                    <option selected></option>
+                    <option>Não perecivel</option>
+                    <option>semi pereciveis</option>
+                    <option>Perecivel</option>
                 </select>
 
             </div>
@@ -106,6 +107,10 @@
                 <textarea id="text-area" rows="3" cols="63" ></textarea>
             </div>
 
+              <div class="">
+                <button onclick="adicionarDados()">Salvar</button>
+            </div>
+
         </form>    
 
             <div class="button-salvar">
@@ -117,7 +122,9 @@
                 <br>
 
         <div class="row">
+
              <div class="div-registros">
+
                 <div class="leftcolumn">
 
                 <h3>Total de registros:</h3>
@@ -135,6 +142,7 @@
         </div>            
 
             <div class="div-table">
+
                 <table id="tabela">
                     <tr>
                         <th>Seleção</th>
@@ -152,11 +160,11 @@
                         <td>Arroz</td>
                         <td>12</td>
                         <td>12/10/2020</td>
-                        <td>Peresivel</td>
+                        <td>Perecivel</td>
                         <td>R$10.00</td>
                         <td>5</td>
                         <td>Arroz 5Kg</td>
-                        <td></td>
+                        <td id="linha-remover"><input type="button" value="remover" onclick="removeDados('linha-remover')"></td>
                     </tr>
                 </table>
             </div>
