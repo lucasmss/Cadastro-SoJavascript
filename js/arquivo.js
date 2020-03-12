@@ -35,11 +35,13 @@ function validarDados(){
     var validade = document.getElementById('validade').value;
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
+    var emEstoque = document.getElementsByName('emEstoque').value;
+    var descricao = document.getElementById('text-area').value;
 
 
-    if(nome != "" && quantidade != "" && validade != "" && tipoProduto != "" && valor !=""){
+    if(nome != "" ){
 
-        alert("funciona!")
+        adicionarDados();
 
     } else{
         
@@ -48,38 +50,54 @@ function validarDados(){
     }
 
 }
+var contador = 0;
 
 function adicionarDados(){
 
-    
+    contador++;
     var tabela = document.getElementById('tabela');
-    var qtnLinhas = tabela.rows.length;
-    var linha = tabela.insertRow(qtnLinhas);
-  
+    var linha = tabela.insertRow(tabela.length);
     
-    var cellNome = linha.insertCell(0);
-    var cellQuantidade = linha.insertCell(1);
-    var cellValidade = linha.insertCell(2);
-    var cellTipoProduto = linha.insertCell(3);
-    var cellValor = linha.insertCell(4);
+  
+    var Selecao = linha.insertCell(0);
+    var cellNome = linha.insertCell(1);
+    var cellQuantidade = linha.insertCell(2);
+    var cellValidade = linha.insertCell(3);
+    var cellTipoProduto = linha.insertCell(4);
+    var cellValor = linha.insertCell(5);
+    var cellEmEstoque = linha.insertCell(6);
+    var celDescricao = linha.insertCell(7);
+    var btnExcluir = linha.insertCell(8);
+
+
 
     var nome = document.getElementById('nome').value;
     var quantidade = document.getElementById('quantidade').value;
     var validade = document.getElementById('validade').value;
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
+    var emEstoque = document.getElementsByName('emEstoque'.value).value;
+    var descricao = document.getElementById('text-area').value;
 
+   
 
+    Selecao.innerHTML = "<input type='checkbox'/>"
     cellNome.innerHTML = nome;
     cellQuantidade.innerHTML = quantidade;
     cellValidade.innerHTML = validade;
     cellTipoProduto.innerHTML = tipoProduto;
     cellValor.innerHTML = valor;
-
+    cellEmEstoque.innerHTML = emEstoque;
+    celDescricao.innerHTML = descricao;
+    btnExcluir.innerHTML = "<button onclick= 'removeDados(this)'>Remover</button>"
+  
 }
 
-function removeDados(id){
+function removeDados(linha){
 
-    teste = document.getElementById(id);
-    teste.parentNode.parentNode.removeChild(teste.parentNode);
+    var linha = tabela.insertRow(tabela.length);
+    var i = linha.parentNode.parentNode.rowIndex;
+
+    document.getElementById('tabela').deleteRow(i);
+    
 }
