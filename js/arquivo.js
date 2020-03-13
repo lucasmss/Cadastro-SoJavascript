@@ -77,23 +77,11 @@ function adicionarDados(){
     var validade = document.getElementById('validade').value;
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
-    var emEstoqueSim = document.getElementById('simRadio').value;
+    var emEstoque = document.getElementById('simRadio').value;
     var emEstoqueNao = document.getElementById('naoRadio').value;
     var descricao = document.getElementById('textArea').value;
 
   
-
-    if(emEstoqueSim == 'Sim'){
-
-        emEstoque = 'Sim';
-
-    }else{
-        
-        emEstoque = 'Não';
-    }
-
-   
-
     Selecao.innerHTML = "<input type='checkbox'/>"
     cellNome.innerHTML = nome;
     cellQuantidade.innerHTML = quantidade;
