@@ -36,7 +36,7 @@ function validarDados(){
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
     var emEstoque = document.getElementsByName('emEstoque').value;
-    var descricao = document.getElementById('text-area').value;
+    var descricao = document.getElementById('textArea').value;
 
 
     if(nome != "" ){
@@ -67,6 +67,7 @@ function adicionarDados(){
     var cellValor = linha.insertCell(5);
     var cellEmEstoque = linha.insertCell(6);
     var celDescricao = linha.insertCell(7);
+    var btnEdiar = linha.insertCell(8);
     var btnExcluir = linha.insertCell(8);
 
 
@@ -76,8 +77,20 @@ function adicionarDados(){
     var validade = document.getElementById('validade').value;
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
-    var emEstoque = document.getElementsByName('emEstoque'.value).value;
-    var descricao = document.getElementById('text-area').value;
+    var emEstoqueSim = document.getElementById('simRadio').value;
+    var emEstoqueNao = document.getElementById('naoRadio').value;
+    var descricao = document.getElementById('textArea').value;
+
+  
+
+    if(emEstoqueSim == 'Sim'){
+
+        emEstoque = 'Sim';
+
+    }else{
+        
+        emEstoque = 'Não';
+    }
 
    
 
@@ -89,15 +102,21 @@ function adicionarDados(){
     cellValor.innerHTML = valor;
     cellEmEstoque.innerHTML = emEstoque;
     celDescricao.innerHTML = descricao;
-    btnExcluir.innerHTML = "<button onclick= 'removeDados(this)'>Remover</button>"
+    btnEdiar.innerHTML = "<button onclick= 'editarDados(this)'>Editar</button>";
+    btnExcluir.innerHTML = "<button onclick= 'removeDados(this)'>Excluir</button>";
   
 }
 
+function editarDados(){
+
+
+}
+
+
 function removeDados(linha){
 
-    var linha = tabela.insertRow(tabela.length);
-    var i = linha.parentNode.parentNode.rowIndex;
+    var linhaExcluir = linha.parentNode.parentNode.rowIndex;
 
-    document.getElementById('tabela').deleteRow(i);
+    document.getElementById('tabela').deleteRow(linhaExcluir);
     
 }

@@ -139,11 +139,19 @@ label {
     flex-direction: row;
 }
 
-table, th, td{
-    border: 1px solid black;
+table, th{
+    border-collapse:collapse;
+	border:1px solid black;
     font-family: arial, sans-serif;
-    border-collapse: collapse;
     width: 86%;
+    
+   
+}
+table, td {
+    widows: 25px;
+	height:25px;
+	border:1px solid black;
+
 }
 
 
