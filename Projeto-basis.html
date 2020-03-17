@@ -63,38 +63,39 @@
 
                 <div class="nome">
 
-                <label>Nome*</label>
-                <input type="text">
+                <label for="nome">Nome*</label>
+                <input type="text" id="nome">
 
                 </div>    
 
                 <div class="quantidade">
-                <label>Quantidade*</label>
-                <input type="number">
+                <label for="quantidade">Quantidade*</label>
+                <input type="number" id="quantidade">
             </div>
 
             <div class="validade">
-                <label>Validade*</label>
-                <input type="date">
+                <label for="validade">Validade*</label>
+                <input type="date" id="validade">
             </div>
 
             <div class="tipoProduto">
-                <label>Tipo de produto*</label>
-                <select>
-                    <option>Seleção</option>
-                    <option>Peresivel</option>
-                    <option>Não peresivel</option>
+                <label for="tipoProduto">Tipo de produto*</label>
+                <select id="tipoProduto">
+                    <option selected></option>
+                    <option>Não perecivel</option>
+                    <option>semi pereciveis</option>
+                    <option>Perecivel</option>
                 </select>
 
             </div>
 
             <div class="valor">
-                <label>Valor*</label>
-                <input type="number">
+                <label class="label-valor" for="valor">Valor*</label>
+                <input type="number" id="valor">
             </div>
 
             <div class="emEstoque">
-                <label>Em estoque</label>
+                <label for="emEstoque">Em estoque</label>
                 <input type="radio" name="emEstoque" value="Sim" id="simRadio">
                 <label for="simRadio">Sim</label>
                 <input type="radio" name="emEstoque" value="Não" id="naoRadio">
@@ -102,30 +103,42 @@
             </div>
 
             <div class="descricao">
-                <label for="text-area">Descrição</label>
-                <textarea id="text-area" rows="3" cols="63" ></textarea>
+                <label for="textArea" for="textArea">Descrição</label>
+                <textarea id="textArea" rows="3" cols="63" ></textarea>
             </div>
 
         </form>    
 
             <div class="button-salvar">
-                <button type="submit">Salvar</button>
+                <button onclick="validarDados()">Salvar</button>
             </div>
 
     </div>
 
                 <br>
 
-             <div class="div-tabela">
-                <h3>Total de registros</h3>
+        <div class="row">
 
-                <h3>Total de registros alterados</h3>
+             <div class="div-registros">
 
-                <h3>Linhas alteradas</h3>
+                <div class="leftcolumn">
 
+                <h3>Total de registros:</h3>
+
+                <h3>Total de registros alterados:</h3>
+
+                </div>
+
+                <div class="rightcolumn-alterar">
+
+                <h3>Linhas alteradas:</h3>
+
+                </div>    
             </div>
+        </div>            
 
-            <div>
+            <div class="div-table">
+
                 <table id="tabela">
                     <tr>
                         <th>Seleção</th>
@@ -139,19 +152,10 @@
                         <th>Ações</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>Arroz</td>
-                        <td>12</td>
-                        <td>12/10/2020</td>
-                        <td>Peresivel</td>
-                        <td>R$10.00</td>
-                        <td>5</td>
-                        <td>Arroz 5Kg</td>
-                        <td></td>
                     </tr>
                 </table>
             </div>
-       
+    </div>
 
 </body>
 
