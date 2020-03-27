@@ -1,6 +1,6 @@
 function validarTelas(){
-    document.getElementById('div-login').style.display = 'none';
-    document.getElementById('div-cadastro').style.display = 'block';
+    document.getElementById('div-login').style.display = 'block';
+    document.getElementById('div-cadastro').style.display = 'none';
 
 }
 
@@ -180,5 +180,6 @@ function adicionarDados(){
     document.getElementById('valor').value="";
     document.getElementsByName('emEstoque').value="";
     document.getElementById('textArea').value="";
-    
+
+  
 }

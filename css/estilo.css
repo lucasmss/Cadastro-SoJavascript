@@ -1,5 +1,6 @@
 body {
     margin-left: 30px;
+    background-color: #91ABF0;
     
 }
 
@@ -8,7 +9,7 @@ body {
     width: 400px;
     margin: auto;
     text-align: center;
-    background-color: beige;
+    background-color: #3B57F4;
 }
 
 #h1-login {
@@ -29,6 +30,9 @@ body {
 #login {
 
    margin-left: 66px;
+   margin-bottom: 10px;
+   background-color: #5CC6F0;
+   border: #5CC6F0;
    
 }
 
@@ -58,30 +62,37 @@ body {
     padding-left: 110px;
 }
 
+#button-sair {
+    margin-left: 50%;
+    background-color: #FB4340;
+    border: #FB4340;
+    
+}
+
 .nome {
   float: left;
-  margin-right: 80px;
+  margin-right: 51px;
 }
 
 .quantidade {
     float: left;
-    margin-right: 80px;
+    margin-right: 50px;
 }
 
 .validade {
     float: left;
-    margin-right: 90px;
+    margin-right: 70px;
 }
 
 .tipoProduto {
     float: left;
-    margin-right: 45px;
+    margin-right: 30px;
     margin-bottom: 20px;
 }
 
 .valor {
     float: left;
-    margin-right: 83px;
+    margin-right: 52px;
     margin-bottom: 20px;
 }   
 .label-valor{
@@ -90,7 +101,7 @@ body {
 
 .emEstoque {
     float: left;
-    margin-right: 135px;
+    margin-right: 105px;
    
 }
 
@@ -104,8 +115,9 @@ label {
 
 .button-salvar{
 
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 140px;
+  
 }
 
 .div-registros {
