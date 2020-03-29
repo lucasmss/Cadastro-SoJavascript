@@ -21,7 +21,7 @@
             <input type="password" name="senha" id="senha" required />
             <br> <br>
 
-            <input type="checkbox" name="lembrar-senha" class="lembrar-senha" />
+            <input type="checkbox" name="lembrar-senha" class="lembrar-senha" id="checkBox"/>
             <label for="lembrar-senha">Lembrar Senha</label>
 
             <button type="submit" id="login" onclick="validarLogin()">Login</button>
@@ -45,7 +45,7 @@
 
                 <div id="usuario-logado">
 
-                    <h3>Usuario Logado:</h3>
+                    <h3>Usuário Logado:<var id="usuario-log"></h3>
 
                 </div>
 
@@ -123,9 +123,9 @@
 
                 <div class="leftcolumn">
 
-                <h3>Total de registros:</h3>
+                <h3>Total de registros: <var id="total_regis"></var></h3>
 
-                <h3>Total de registros alterados:</h3>
+                <h3>Total de registros alterados: <var id="regis_alter"></var></h3>
 
                 </div>
 

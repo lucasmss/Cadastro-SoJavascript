@@ -1,6 +1,6 @@
 body {
-    margin-left: 30px;
-    background-color: #91ABF0;
+   
+    background-color: #d9d9d9;
     
 }
 
@@ -8,14 +8,18 @@ body {
 
     width: 400px;
     margin: auto;
+    margin-top: 160px;
     text-align: center;
-    background-color: #3B57F4;
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 
 #h1-login {
 
  padding-bottom: 20px;
- 
+ margin-left: 6px;
+ padding-top: 10px;
+ color: #666666;
 }
 
 .label-senha {
@@ -23,17 +27,20 @@ body {
     padding-right: 19px;
 }
 
-.lembrar-senha {
- 
-}
-
 #login {
 
    margin-left: 66px;
-   margin-bottom: 10px;
-   background-color: #5CC6F0;
-   border: #5CC6F0;
+   margin-bottom: 15px;
+   background-color: #a6a6a6;
+   border: #a6a6a6;
+   text-decoration: none;
+   border-radius: 4px;
    
+}
+
+#usuario-log{
+    margin-left: 5px;
+    font-family: Arial, sans-serif;
 }
 
 .leftcolumn {
@@ -81,7 +88,7 @@ body {
 
 .validade {
     float: left;
-    margin-right: 70px;
+    margin-right: 79px;
 }
 
 .tipoProduto {

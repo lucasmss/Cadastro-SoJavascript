@@ -8,13 +8,29 @@ function validarLogin(){
 
     var usuario = document.getElementById('usuario').value;
     var senha = document.getElementById('senha').value;
+    var check = document.getElementById('checkBox'); 
     
-    if(usuario == 'admin' && senha == 'admin'){
+    if(usuario == 'Lucas' && senha == '123' || check.checked == true){
+
+      document.getElementById('usuario-log').innerHTML=usuario;
+
+      if (check.checked == true){ 
+       
+        verific_usuario = usuario;
+        varific_senha = senha;
+
+      }else{
+
+        var usuario = document.getElementById('usuario').value="";
+        var senha = document.getElementById('senha').value="";
+      }
     
         document.getElementById('div-login').style.display = 'none';
         document.getElementById('div-cadastro').style.display = 'block';
+
        
         }else if (usuario == "" && senha == "") {
+
             
             alert("Campos em branco");
 
@@ -36,6 +52,7 @@ function validarDados(){
     var tipoProduto = document.getElementById('tipoProduto').value;
     var valor = document.getElementById('valor').value;
     var emEstoque = document.getElementsByName('emEstoque').value;
+
     if (document.getElementById('simRadio').checked) {
         emEstoque  = document.getElementById('simRadio').value;
       }
@@ -50,7 +67,7 @@ function validarDados(){
         if(contador <= 4){
 
         adicionarDados();
-
+        
         }
      
     } else{
@@ -64,6 +81,7 @@ function validarDados(){
 
 
 function edit_row(no)
+
 {
  document.getElementById("edit_button"+no).style.display="none";
  document.getElementById("save_button"+no).style.display="block";
@@ -77,7 +95,7 @@ function edit_row(no)
  if (document.getElementById('simRadio').checked) {
     emEstoque = document.getElementById('simRadio').value;
   }
-  else{
+ else{
     emEstoque = document.getElementById('naoRadio').value;
   }
  //var descricao = document.getElementById('textArea'+no);
@@ -97,13 +115,15 @@ function edit_row(no)
  //tipoProduto.innerHTML="<input type='text' id='tipoProduto_dado"+no+"' value='"+tipoPro_data+"'>";
  valor.innerHTML="<input type='number' id='valor_dado"+no+"' value='"+valor_data+"'>";
  emEstoque.innerHTML="<input type='text' id='emEstoque_dado"+no+"' value='"+emEstoque_data+"'>";
- //descricao.innerHTML="<input type='text' id='descricao_dado"+no+"' value='"+descricao_data+"'>";
+ //descricao.innerHTML=" <textarea id='descricao_dado rows='3' cols='63' "+no+"' value='"+descricao_data+"'></textarea>";
  
 }
 
 
 function save_row(no)
+
 {
+  
     var name_val=document.getElementById("nome_dado"+no).value;
     var quantidade_val=document.getElementById("quantidade_dado"+no).value;
     var validade_val=document.getElementById("validade_dado"+no).value;
@@ -116,7 +136,7 @@ function save_row(no)
     //  else{
     //    emEstoque = document.getElementById('naoRadio').value;
     //  }
-  // var descricao_val=document.getElementById("descricao_dado"+no).value;
+    //var descricao_val=document.getElementById("descricao_dado"+no).value;
    
 
     document.getElementById("nome"+no).innerHTML=name_val;
@@ -125,7 +145,7 @@ function save_row(no)
    // document.getElementById("tipoProduto"+no).innerHTML=tipoProduto_val;
     document.getElementById("valor"+no).innerHTML=valor_val;
    // document.getElementById("emestoque"+no).innerHTML=emEstoque_val;
-   // document.getElementById("textArea"+no).innerHTML=descricao_val;
+    //document.getElementById("textArea"+no).innerHTML=descricao_val;
 
     document.getElementById("edit_button"+no).style.display="block";
     document.getElementById("save_button"+no).style.display="none";
@@ -135,14 +155,16 @@ function save_row(no)
 
 function delete_row(no){
 
+    contador--;
+    document.getElementById('total_regis').innerHTML=contador;
     document.getElementById("row"+no+"").outerHTML="";
-    
 }
 
 function adicionarDados(){
     
     contador++;
-    
+    document.getElementById('total_regis').innerHTML=contador;
+  
     var nome = document.getElementById('nome').value;
     var quantidade = document.getElementById('quantidade').value;
     var validade = document.getElementById('validade').value;
@@ -152,7 +174,7 @@ function adicionarDados(){
     if (document.getElementById('simRadio').checked) {
         emEstoque  = document.getElementById('simRadio').value;
       }
-      else{
+    else{
         emEstoque = document.getElementById('naoRadio').value;
       }
     var descricao = document.getElementById('textArea').value;
@@ -181,5 +203,4 @@ function adicionarDados(){
     document.getElementsByName('emEstoque').value="";
     document.getElementById('textArea').value="";
 
-  
 }
