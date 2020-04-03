@@ -103,8 +103,8 @@
             </div>
 
             <div class="descricao">
-                <label for="textArea" for="textArea">Descrição</label>
-                <textarea id="textArea" rows="3" cols="63" ></textarea>
+                <label for="textArea">Descrição</label>
+                <textarea id="textArea" name="textArea" rows="3" cols="63"></textarea>
             </div>
 
         </form>    
@@ -115,7 +115,7 @@
 
     </div>
 
-                <br>
+     <br>
 
         <div class="row">
 
@@ -125,13 +125,14 @@
 
                 <h3>Total de registros: <var id="total_regis"></var></h3>
 
-                <h3>Total de registros alterados: <var id="regis_alter"></var></h3>
+                <h3>Total de registros alterados: <var id="edit_regis"></var></h3>
 
                 </div>
 
                 <div class="rightcolumn-alterar">
 
-                <h3>Linhas alteradas:</h3>
+                <h3>Linha alterada: <var id="linha_alte"></var></h3>
+
 
                 </div>    
             </div>
@@ -141,6 +142,7 @@
 
                 <table id="tabela">
                     <tr>
+                        <th>selecionar</th>
                         <th>Nome</th>
                         <th>Quantidade</th>
                         <th>Validade</th>
